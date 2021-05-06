@@ -1,6 +1,6 @@
 package com.yeonjae.jo.tgv_reservation_system.web.dto;
 
-import com.yeonjae.jo.tgv_reservation_system.domain.reservation.Reservation;
+//import com.yeonjae.jo.tgv_reservation_system.domain.reservation.Reservation;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 

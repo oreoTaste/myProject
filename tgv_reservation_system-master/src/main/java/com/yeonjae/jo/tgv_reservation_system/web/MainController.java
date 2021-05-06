@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @Controller
 public class MainController {
 
-    @GetMapping("/")
+    @GetMapping("/main")
     public String main1(Model model){
         Organi organi = new Organi(
                 "1",
@@ -29,8 +29,11 @@ public class MainController {
         return "academy";
     }
 
-    @GetMapping("/academyModify/getAcademy/{academyId}")
-    public String main2(@PathVariable() int academyId, Model model){
+    @GetMapping(value= {"/academyModify/getAcademy/{academyId}", "/academyModify/getAcademy/"})
+    public String main2(@PathVariable(name="academyId", required = false) Integer academyId, Model model){
+        if(academyId == null)
+            return "academy_mod";
+        System.out.println("main2" + academyId);
         Organi organi = new Organi(
                 "1",
                 "기관명",
@@ -41,13 +44,8 @@ public class MainController {
                 "역삼역 또는 선릉역");
 
         model.addAttribute("academy", organi);
+        System.out.println(">>>>> main2");
         return "academy_mod";
     }
-
-    @GetMapping("/academyModify/getAcademy/")
-    public String main3(){
-        return "academy_mod";
-    }
-
 
 }

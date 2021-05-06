@@ -5,7 +5,7 @@ const choiceA = document.querySelector(".institution-choice-a");
 const choiceB = document.querySelector(".institution-choice-b");
 const addBtn = document.querySelector(".institution-btn-add");
 var curPage = 1;
-const modAddUrl = "/academyModify/getAcademy";
+const modAddUrl = "/academyModify/getAcademy/";
 /* 변수 선언 ---------------------------------------------------*/
 
 /* sample data */
@@ -104,7 +104,7 @@ const setModifyBtns = () => {
   document.querySelectorAll(".modify").forEach((e1) => {
     // console.log(e1);
     e1.addEventListener("click", () => (
-      window.location.href = modAddUrl + "/1"
+      window.location.href = modAddUrl + "1"
     ));
   });
 };
