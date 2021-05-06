@@ -1,0 +1,24 @@
+.alert-announce,
+.alert-infos,
+.alert-buttons {
+    text-align: center;
+}
+.alert-infos {
+    margin: 3rem;
+}
+.alert-infos > .infodetail {
+    margin: 1rem;
+}
+.alert-infos > .infodetail > label {
+    float: left;
+    position: absolute;
+}
+
+.alert-infos > .infodetail > input {
+    margin-left: 10rem;
+}
+.alert-buttons > button {
+    width: 5rem;
+    padding: 0.7rem;
+    margin-right: 1rem;
+}
